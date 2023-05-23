@@ -1,0 +1,11 @@
+-Cuanto te loggeas el profesor debe de entrar directamente 
+a la pagina de alumnado
+
+-Cuando busco el apellido del alumno o el nombre de la
+asignatura no pagina bien.
+
+-Quitar los header("Location") por un post en otra pagina
+
+-Include o require?
+
+-Cambiar pantallas de borrar y ponerlas en el menu

@@ -1,0 +1,95 @@
+<?php
+if(session_status() !== PHP_SESSION_ACTIVE){
+    session_start();
+    }
+$p="menuNavegacion";
+if(isset($_GET["p"])){
+    $p=$_GET["p"];
+}
+if($p=="menuNavegacion"){
+    $pagina="menuNavegacion.php";
+}
+
+if($p=="altaProfesor"){
+    $pagina="altaProfesor.php";
+}
+
+if($p=="altaAlumno"){
+    $pagina="altaAlumno.php";
+}
+if($p=="modificacionAlumno"){
+    $pagina="modificacionAlumno.php";
+}
+if($p=="modificacionAsignatura"){
+    $pagina="modificacionAsignatura.php";
+}
+if($p=="modificacionProfesor"){
+    $pagina="modificacionProfesor.php";
+}
+if($p=="modificarGrupo"){
+    $pagina="modificarGrupo.php";
+}
+if($p=="asignaturasAlumno"){
+    $pagina="asignaturasAlumno.php";
+}
+if($p=="loginProfesor"){
+    $pagina="loginProfesor.php";
+}
+if($p=="menuAlumnado"){
+    $pagina="menuAlumnado.php";
+}
+if($p=="menuAsignaturas"){
+    $pagina="menuAsignaturas.php";
+}
+if($p=="menuProfesorado"){
+    $pagina="menuProfesorado.php";
+}
+if($p=="menuFaltas"){
+    $pagina="menuFaltas.php";
+}
+if($p=="menuGrupos"){
+    $pagina="menuGrupos.php";
+}
+if($p=="menuListados"){
+    $pagina="menuListados.php";
+}
+if($p=="menuNotasAlumno"){
+    $pagina="menuNotasAlumno.php";
+}
+if($p=="borrarAlumno"){
+    $pagina="borrarAlumno.php";
+}
+if($p=="borrarProfesor"){
+    $pagina="borrarProfesor.php";
+}
+if($p=="borrarAsignatura"){
+    $pagina="borrarAsignatura.php";
+}
+if($p=="borrarMatricula"){
+    $pagina="borrarMatricula.php";
+}
+if($p=="borrarGrupo"){
+    $pagina="borrarGrupo.php";
+}
+if($p=="borrarFalta"){
+    $pagina="borrarFalta.php";
+}
+if(isset($_GET['a'])){
+    $accion=$_GET['a'];
+    if($accion=="logout"){
+       echo "borrar";
+       session_destroy();
+        unset($_SESSION['nombre']);
+        unset($_SESSION['codigo_P']);
+        unset($_SESSION['clave']);
+        unset($_SESSION['admin']);
+        
+    }
+}
+
+require_once("cabecera.php");
+
+require($pagina);
+
+require("pie.php");
+?>
